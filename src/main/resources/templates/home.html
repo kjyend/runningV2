@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>러닝 기록 홈</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header>
+        <h1>러닝 기록 웹사이트</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">홈</a></li>
+            <li><a th:href="@{/record}">러닝 기록</a></li>
+            <li><a th:href="@{/user}">프로필</a></li>
+            <li><a th:href="@{/login}">로그인</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>가장 최근의 러닝 기록</h2>
+            <p th:text="${latestRecord}"></p>
+        </section>
+        <section>
+            <h2>내 러닝 기록 보기</h2>
+            <a th:href="@{/record}">러닝 기록 페이지로 이동</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 러닝 기록 웹사이트</p>
+    </footer>
+</body>
+</html>
